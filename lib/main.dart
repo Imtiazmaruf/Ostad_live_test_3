@@ -73,20 +73,22 @@ import'package:flutter/material.dart';
           body: ListView.builder(
             itemCount: weatherData.length,
             itemBuilder: (context, index) {
-              return ListTile(
-                title: Text('City : ${weatherData[index]['city']}',
-                  style: TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w600
-                  ),),
-                subtitle: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    Text('Temperature: ${weatherData[index]['temperature']}°C'),
-                    Text('Condition: ${weatherData[index]['condition']}'),
-                    Text('Humidity: ${weatherData[index]['humidity']}%'),
-                    Text('Wind Speed: ${weatherData[index]['windSpeed']} km/h'),
-                  ],
+              return Card(
+                child: ListTile(
+                  title: Text('City : ${weatherData[index]['city']}',
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w600
+                    ),),
+                  subtitle: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Text('Temperature: ${weatherData[index]['temperature']}°C'),
+                      Text('Condition: ${weatherData[index]['condition']}'),
+                      Text('Humidity: ${weatherData[index]['humidity']}%'),
+                      Text('Wind Speed: ${weatherData[index]['windSpeed']} km/h'),
+                    ],
+                  ),
                 ),
               );
             },
